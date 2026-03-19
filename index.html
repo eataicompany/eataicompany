@@ -2,6 +2,15 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HLFL9KPFQW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HLFL9KPFQW');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EatAI — Always AI. Always Human. All AI.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -538,6 +547,32 @@ nav {
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.08);
 }
+
+.footer-logo {
+    font-family: var(--font-titulo);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-dorado);
+    margin-bottom: 0.75rem;
+}
+/* Contenedor exclusivo para el logo del footer */
+.footer-logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+/* ⚠️ NUEVA CLASE PARA EL LOGO DEL FOOTER ⚠️ */
+.footer-logo-img {
+    height: 45px; /* Misma altura que el header, pero en su propia clase */
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px; /* Redondeado sutil para app móvil top */
+    /* Efectos visuales de clase mundial */
+    border: 2px solid var(--color-accent); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
 
 /* Toscano mock */
 .mt-header { background: #c0392b; height: 28px; display: flex; align-items: center; padding: 0 10px; }
@@ -1293,11 +1328,32 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-brand">
-    
-  </div>
-  <div class="footer-copy">© 2026 EatAI · Popayán, Colombia · Todos los derechos reservados</div>
-  <div class="footer-slogan"></div>
+    <div class="footer-logo-container">
+        <img src="images/Eatai.jpg" alt="EatAi" class="footer-logo-img">
+    </div>
+
+    <div class="footer-socials" style="display: flex; gap: 20px; justify-content: center; margin-top: 0; margin-bottom: 0.3rem; font-size: 1.5rem;">
+        <a href="https://www.facebook.com/" target="_blank" class="social-link" title="Síguenos en Facebook" style="text-decoration: none; color: inherit; transition: color 0.2s ease;">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="social-link" title="Síguenos en Instagram" style="text-decoration: none; color: inherit; transition: color 0.2s ease;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank" class="social-link" title="Síguenos en TikTok" style="text-decoration: none; color: inherit; transition: color 0.2s ease;">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+
+    <p style="margin-top: 0; font-size: 0.9rem; line-height: 1.6;">
+        Desarrollado por 
+        <a href="https://eataicompany.github.io/eataicompany/" target="_blank" class="footer-link">🚀 EatAi</a>
+        | 
+        <a href="https://wa.me/573217054190?text=Hola%20EatAi,%20vengo%20desde%20la%20web%20de%20EatAi" target="_blank" class="footer-link">📞 321 705 4190</a>
+    </p>
+
+    <p style="font-size: 0.8rem; color: var(--color-gris-claro); margin-top: 0.3rem;">
+        © 2026 EatAi. Todos los derechos reservados.
+    </p>
 </footer>
 
 <script>
