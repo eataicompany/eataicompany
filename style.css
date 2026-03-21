@@ -537,23 +537,27 @@ nav {
     margin-bottom: 0.75rem;
 }
 /* Contenedor exclusivo para el logo del footer */
+/* Logo del footer */
 .footer-logo-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 /* ⚠️ NUEVA CLASE PARA EL LOGO DEL FOOTER ⚠️ */
 .footer-logo-img {
-    height: 45px; /* Misma altura que el header, pero en su propia clase */
-    width: auto;
-    object-fit: contain;
-    border-radius: 8px; /* Redondeado sutil para app móvil top */
-    /* Efectos visuales de clase mundial */
-    border: 2px solid var(--color-accent); 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
 }
 
+.footer-logo-img:hover {
+  transform: scale(1.02);
+}
 
 /* Toscano mock */
 .mt-header { background: #c0392b; height: 28px; display: flex; align-items: center; padding: 0 10px; }
@@ -915,10 +919,12 @@ footer {
   padding: 36px 48px;
   border-top: 1px solid var(--border-gold);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  background: rgba(8, 9, 26, 0.95);
 }
 
 .footer-brand img {
@@ -976,4 +982,72 @@ footer {
   .divider { margin: 0 20px; }
   footer { padding: 24px 20px; flex-direction: column; text-align: center; }
   .manifesto { padding: 70px 20px; }
+}
+
+/* Redes Sociales */
+.footer-socials {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.social-link {
+  text-decoration: none;
+  color: var(--gray-light);
+  transition: all 0.2s ease;
+  font-size: 1.6rem;
+}
+
+.social-link:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* Textos del footer */
+.footer-text {
+  margin: 0;
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.footer-link {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+/* Línea separadora opcional */
+.footer-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--border-gold);
+  margin: 8px auto;
+}
+
+/* Responsive: ajuste de padding en móvil */
+@media (max-width: 768px) {
+  footer {
+    padding: 32px 20px;
+    gap: 16px;
+  }
+  
+  .footer-socials {
+    gap: 24px;
+  }
+  
+  .social-link {
+    font-size: 1.4rem;
+  }
+  
+  .footer-text {
+    font-size: 11px;
+  }
 }
